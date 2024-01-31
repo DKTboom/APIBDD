@@ -6,7 +6,7 @@ import io.cucumber.java.Before;
 
 public class Hooks {
 	
-	@Before("@deletePlaceAPI")
+	@Before("@deletePlace")
 	public void beforeDeleteAPITest() throws IOException {
 		
 		stepDefination m = new stepDefination();

@@ -1,7 +1,6 @@
-
 Feature: Validating Place API's
 
-  @addPlaceAPI
+  @AddPlace
   Scenario Outline: Verify new places is being added successfully using addPlaceAPI
   
    Given Add Place Payload with "<name>"  "<accuracy>"
@@ -10,16 +9,15 @@ Feature: Validating Place API's
 	And "status" in response body is "OK"
 	And "scope" in response body is "APP"
 	And verify place_Id created maps to "<name>" using "getPlaceAPI"
-	#And verify place_Id is deleted from DB using "deletePlaceAPI"
-	#And "status" in response body is "OK"
+
 	
 Examples:
 	|name 	 | accuracy |
-	|Aliviaaa |  500 |
+	|Alivia1 |  500 |
 #	|BBhouse | 100  |
 
 
-  @deletePlaceAPI
+  @deletePlace
 Scenario: Verify new place is deleted successfully using deletePlaceAPI
 
 	Given deletePlaceAPI payload
