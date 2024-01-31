@@ -1,6 +1,6 @@
 Feature: Validating Place API's
 
-  @AddPlace
+  @AddPlace @Regression
   Scenario Outline: Verify new places is being added successfully using addPlaceAPI
   
    Given Add Place Payload with "<name>"  "<accuracy>"
@@ -17,7 +17,7 @@ Examples:
 #	|BBhouse | 100  |
 
 
-  @deletePlace
+  @deletePlace @Regression
 Scenario: Verify new place is deleted successfully using deletePlaceAPI
 
 	Given deletePlaceAPI payload
